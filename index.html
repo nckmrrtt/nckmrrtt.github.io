@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
+    
     <!-- I hated bootstrap for so long and now I've caved... oh well -->
 
 
@@ -19,14 +19,127 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <h1>Hello, world!</h1>
 
-    <p> play a stupid game <a href="game.html"> here </a> </p>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="page-scroll navbar-brand" href="#page-top">Howdy.</a>
+        </div> <!-- /.navbar-header -->
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="hidden">
+                <a href="#page-top" class="page-scroll"></a>
+            </li>
+            <li><a href="#uno" class="page-scroll nav-btn">blah blah 1</a></li>
+            <li><a href="#dos" class="page-scroll nav-btn">blah blah 2</a></li>
+            <li><a href="#tres" class="page-scroll nav-btn">blah blah 3</a></li>
+          </ul>
+
+        </div><!--/.navbar-collapse -->
+      </div> <!-- /.container -->
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <!-- Main jumbotron bc why not-->
+        <div class="jumbotron">
+          <h1 class="text-center"><strong>Hello.</strong></h1>
+          <h3 class="text-center">Play my stupid <a href="game.html">game</a>.</h3>
+        </div> 
+      </div> 
+    </div>
+
+    <div class="container main-content">
+
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>Rice DevChats</strong> is a student-led workshop series for Rice programmers, developers, designers, and all-around creative enthusiasts. The motivation is simple. Learning new things is sometimes hard. But learning new things on your own is <em>always</em> harder. 
+          </div>
+          <div class="col-md-6">
+            <p>Everyone knows that technology is always changing. And whether you're an all-star coding prodigy or a slacker who feels chronically left behind, it's always helpful when someone hands you the cliffnotes. Our idea is to hand you the guy (or girl) who has the cliffnotes.</p>
+          </div>
+        </div>
+
+      <section id="uno"></section>
+      <hr> <!-- Horizontal Line -->
+
+    </div>
+
+    <div class="container main-content">
+
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>Rice DevChats</strong> is a student-led workshop series for Rice programmers, developers, designers, and all-around creative enthusiasts. The motivation is simple. Learning new things is sometimes hard. But learning new things on your own is <em>always</em> harder. 
+          </div>
+          <div class="col-md-6">
+            <p>Everyone knows that technology is always changing. And whether you're an all-star coding prodigy or a slacker who feels chronically left behind, it's always helpful when someone hands you the cliffnotes. Our idea is to hand you the guy (or girl) who has the cliffnotes.</p>
+          </div>
+        </div>
+
+      <section id="dos"></section>
+      <hr> <!-- Horizontal Line -->
+
+    </div>
+
+    <div class="container main-content">
+
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>Rice DevChats</strong> is a student-led workshop series for Rice programmers, developers, designers, and all-around creative enthusiasts. The motivation is simple. Learning new things is sometimes hard. But learning new things on your own is <em>always</em> harder. 
+          </div>
+          <div class="col-md-6">
+            <p>Everyone knows that technology is always changing. And whether you're an all-star coding prodigy or a slacker who feels chronically left behind, it's always helpful when someone hands you the cliffnotes. Our idea is to hand you the guy (or girl) who has the cliffnotes.</p>
+          </div>
+        </div>
+
+      <section id="tres"></section>
+      <hr> <!-- Horizontal Line -->
+
+    </div>
+
+    <div class="container main-content">
+
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>Rice DevChats</strong> is a student-led workshop series for Rice programmers, developers, designers, and all-around creative enthusiasts. The motivation is simple. Learning new things is sometimes hard. But learning new things on your own is <em>always</em> harder. 
+          </div>
+          <div class="col-md-6">
+            <p>Everyone knows that technology is always changing. And whether you're an all-star coding prodigy or a slacker who feels chronically left behind, it's always helpful when someone hands you the cliffnotes. Our idea is to hand you the guy (or girl) who has the cliffnotes.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scripts -->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <!-- JQuery Easing -->
+    <script src="js/vendor/jquery.easing.min.js"></script>
+    <script src="js/vendor/scrolling-nav.js"></script>
+
+    <!-- Backstretch -->
+    <script src="js/vendor/jquery.backstretch.min.js"></script>
+    <script>$.backstretch("img/back.jpg");</script>
+
+    <!-- Main / extras -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
   </body>
 </html>
