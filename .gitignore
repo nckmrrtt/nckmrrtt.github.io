@@ -3,4 +3,4 @@
 *.pyc
 bootstrap-3*
 devchats*
-setup.sh
+cleanup.sh
