@@ -1,0 +1,4 @@
+getbootstrap.com/examples/cover - could be simpler and just better. and nicer. and cooler.
+
+aventure - use web.py to make aventure game actually work on the web
+pewpew - make a simple unity game maybe?
