@@ -1,0 +1,1197 @@
+
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">  
+
+<!--<![endif]-->
+<head>
+
+	<!-- ==============================================
+		Website by Telegraphics, Inc.
+		Chicago, IL - info@telegraphicsinc.com
+		http://www.telegraphicsinc.com
+	=============================================== -->
+
+
+	<!-- ==============================================
+	Title and Meta Tags
+	=============================================== -->
+	<meta charset="UTF-8">
+	<title>Using Bootstrap 3 with Internet Explorer 8 (IE8) | Telegraphics Inc.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+	<!-- ==============================================
+	Favicons
+	=============================================== -->
+	<link rel="shortcut icon" href="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/favicons/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/favicons/apple-touch-icon-152x152.png">
+	<link rel="icon" type="image/png" href="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/favicons/favicon-196x196.png" sizes="196x196">
+	<link rel="icon" type="image/png" href="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/favicons/favicon-160x160.png" sizes="160x160">
+	<link rel="icon" type="image/png" href="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/favicons/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/favicons/favicon-32x32.png" sizes="32x32">
+	<meta name="msapplication-TileColor" content="#ee4976">
+	<meta name="msapplication-TileImage" content="http://www.telegraphicsinc.com/wp-content/themes/tg-base/library/images/favicons/mstile-144x144.png">
+	<meta name="msapplication-square70x70logo" content="http://www.telegraphicsinc.com/wp-content/themes/tg-base/library/images/favicons/mstile-70x70.png">
+	<meta name="msapplication-square144x144logo" content="http://www.telegraphicsinc.com/wp-content/themes/tg-base/library/images/favicons/mstile-144x144.png">
+	<meta name="msapplication-square150x150logo" content="http://www.telegraphicsinc.com/wp-content/themes/tg-base/library/images/favicons/mstile-150x150.png">
+	<meta name="msapplication-square310x310logo" content="http://www.telegraphicsinc.com/wp-content/themes/tg-base/library/images/favicons/mstile-310x310.png">
+	<meta name="msapplication-wide310x150logo" content="http://www.telegraphicsinc.com/wp-content/themes/tg-base/library/images/favicons/mstile-310x150.png">
+	
+	
+	<!-- ==============================================
+	CSS
+	=============================================== -->    
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">	<link rel="stylesheet" href="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/css/tg.css?ver=201506060455" type="text/css"/>
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+	
+	<!-- ==============================================
+	Fonts
+	=============================================== -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400|Open+Sans:400,700,300,100|Libre+Baskerville:800,400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:400italic' rel='stylesheet' type='text/css'>
+	
+	
+	<!-- ==============================================
+	JS
+	=============================================== -->
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script type='text/javascript' src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"></script>
+	<![endif]-->
+	<script src="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/js/css3-mediaqueries.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
+
+
+	<!-- ==============================================
+	Facebook Meta 
+	=============================================== -->
+		<!-- the default values -->
+	<meta property="fb:app_id" content="319211828195495" />
+	<meta property="fb:admins" content="516820857" />	
+	
+	<!-- if page is content page -->
+		<meta property="og:url" content="http://www.telegraphicsinc.com/2013/10/using-bootstrap-3-with-internet-explorer-8-ie8/"/>
+	<meta property="og:title" content="Using Bootstrap 3 with Internet Explorer 8 (IE8)" />
+	<meta property="og:description" content="In a recent website development project we had the struggle of conforming Bootstrap 3 to format correctly in IE8. After much digging we were able to find a solution that worked effectively for us and thought we&#8217;d pass along the help. THE PROBLEM Every col-* class we had setup within our document was running full [...]" />
+	<meta property="og:type" content="article" />
+	 
+		<meta property="og:image" content="http://www.telegraphicsinc.com/wp-content/uploads/2013/10/bootstrap-3-and-internet-explorer-ie-8.jpg" />
+		
+	<!-- if page is others -->
+		
+	<meta name="p:domain_verify" content="7fd7d08ea5a900e481c83ee0fa447026"/>
+	<!-- ==============================================
+	Pingback 
+	=============================================== -->
+	<link rel="pingback" href="http://www.telegraphicsinc.com/xmlrpc.php" />
+		
+	<link rel="alternate" type="application/rss+xml" title="Telegraphics Inc. &raquo; Using Bootstrap 3 with Internet Explorer 8 (IE8) Comments Feed" href="http://www.telegraphicsinc.com/2013/10/using-bootstrap-3-with-internet-explorer-8-ie8/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.telegraphicsinc.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.2.2"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='digg-digg-css'  href='http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/plugins/digg-digg/css/diggdigg-style.css?ver=5.3.6' type='text/css' media='screen' />
+<link rel='stylesheet' id='wpclef-main-css'  href='http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/plugins/wpclef/assets/dist/css/main.min.css?ver=2.2.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+<script type='text/javascript' src='http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-includes/js/jquery/jquery.js?ver=1.11.2'></script>
+<script type='text/javascript' src='http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.telegraphicsinc.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.telegraphicsinc.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='What the iPad Air Means for Creatives' href='http://www.telegraphicsinc.com/2013/10/what-the-new-ipad-air-means-to-creatives/' />
+<link rel='next' title='Improper DOM Structures: Trying to Customize Active&#8217;s RegOnline CSS' href='http://www.telegraphicsinc.com/2013/10/improper-dom-structures-customizing-actives-regonline-css/' />
+<link rel='shortlink' href='http://www.telegraphicsinc.com/?p=1208' />
+
+<!-- BEGIN GADWP v4.3.2 Classic Tracking - https://deconf.com/google-analytics-dashboard-wordpress/ -->
+<script type="text/javascript">
+(function($){
+    $(window).load(function() {
+        if (this._gat) {
+            tks = this._gat._getTrackers();
+            ga_track = function(p) {
+                for (i=0; i < tks.length; i++) {
+                    var n = tks[i]._getName() !== "" ? tks[i]._getName()+"." : "";
+                    a = [];
+                    for (i2=0; i2 < p.length; i2++) {
+                        var b = i2===0 ? n+p[i2] : p[i2];
+                        a.push(b);
+                    }
+                    _gaq.push(a);
+                }
+            };
+            $('a').filter(function() {
+                return this.href.match(/.*\.(zip|mp3|mpeg|pdf|doc*|ppt*|xls*|jpeg|png|gif|tiff)(\?.*)?$/);
+            }).click(function(e) {
+                ga_track(['_trackEvent', 'download', 'click', this.href]);
+            });
+            $('a[href^="mailto"]').click(function(e) {
+                ga_track(['_trackSocial', 'email', 'send', this.href]);
+             });
+            var loc = location.host.split('.');
+            while (loc.length > 2) { loc.shift(); }
+            loc = loc.join('.');
+            var localURLs = [
+                              loc,
+                              'http://www.telegraphicsinc.com'
+                            ];
+            $('a[href^="http"]').filter(function() {
+                for (var i = 0; i < localURLs.length; i++) {
+                    if (this.href.indexOf(localURLs[i]) == -1) return this.href;
+                }
+            }).click(function(e) {
+                ga_track(['_trackEvent', 'outbound', 'click', this.href]);
+            });
+        }
+    });
+})(jQuery);
+</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-3478789-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<!-- END GADWP Classic Tracking -->
+
+
+<!-- All in One SEO Pack Pro 2.3.2 by Michael Torbert of Semper Fi Web Design[745,820] -->
+<!-- Debug String: SXCZN0SVIK38FNVXXN/YY9IMLQE -->
+<meta name="description"  content="Unfortunately Bootstrap 3 doesn't play so nice with Internet Explorer 8. In a recent web development project, we were able to find a way to make these 2 live" />
+
+<meta name="keywords"  content="css3,ie,rwd" />
+
+<link rel="canonical" href="http://www.telegraphicsinc.com/2013/10/using-bootstrap-3-with-internet-explorer-8-ie8/" />
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-3478789-1']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+<!-- /all in one seo pack pro -->
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+
+
+</head>
+
+<body class="single single-post postid-1208 single-format-standard" data-spy="scroll" data-target="#main-nav" data-offset="100">
+		<div id="fb-root"></div>
+		<script>
+		  window.fbAsyncInit = function() {
+		    FB.init({appId: '319211828195495', status: true, cookie: true,
+		             xfbml: true});
+		  };
+		  (function() {
+		    var e = document.createElement('script'); e.async = true;
+		    e.src = document.location.protocol +
+		      '//connect.facebook.net/en_US/all.js';
+		    document.getElementById('fb-root').appendChild(e);
+		  }());
+		</script>
+		<!-- ==============================================
+		MAIN NAV
+		=============================================== -->
+		<div id="main-nav" class="navbar navbar-fixed-top">
+			<div class="container">
+			
+				<div class="navbar-header">
+				
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
+						<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button>
+					
+					<!-- ======= LOGO (for small screens)========-->
+					<a class="navbar-brand visible-xs" href="http://www.telegraphicsinc.com"><img src="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/tg-letters.png" class="img-responsive" /></a>
+					
+				</div>
+				
+				<div id="site-nav" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="http://www.telegraphicsinc.com/about">About</a>
+						</li>
+						<li>
+							<a href="http://www.telegraphicsinc.com/services">Services</a>
+						</li>
+						<li id="logo">
+							<a href="http://www.telegraphicsinc.com">
+								<img src="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/tg-letters.png" class="img-responsive" />
+							</a>
+						</li>
+						<li>
+							<a href="http://www.telegraphicsinc.com/blog">Blog</a>
+						</li>
+						<li>
+							<a href="http://www.telegraphicsinc.com/contact">Contact</a>
+						</li>
+					</ul>
+				</div><!--End navbar-collapse -->
+			</div><!--End container -->
+			
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<div class="container">
+			<div class="row">
+				<!-- ==============================================
+				BLOG
+				=============================================== -->
+				<section class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+	
+	
+						<article id="post-1208">
+							<h1 class="h2">Using Bootstrap 3 with Internet Explorer 8 (IE8)</h1>
+							<img width="1280" height="576" src="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/uploads/2013/10/bootstrap-3-and-internet-explorer-ie-8.jpg" class="img-responsive img-thumbnail blog-feature wp-post-image" alt="bootstrap-3-and-internet-explorer-ie-8" />							
+							<div id="blog-meta" class="well">
+								<div class="row">
+									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+										<ul class="list-unstyled list-inline the-meta">
+											<li><i class="fa fa-calendar icon"></i>October 24, 2013</li>
+											<li>By Joe Martin</li>
+											<li><i class="fa fa-folder-open icon"></i><a href="http://www.telegraphicsinc.com/category/coding/" title="View all posts in Coding">Coding</a></li>
+										</ul>									
+									</div>
+									
+									<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+										<ul class="list-unstyled list-inline pull-right socialMedia">
+											<li><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.telegraphicsinc.com/2013/10/using-bootstrap-3-with-internet-explorer-8-ie8/" data-count="horizontal" data-text="Using Bootstrap 3 with Internet Explorer 8 (IE8)" data-via="twitter_username" ></a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></li>
+											<li><iframe src='http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.telegraphicsinc.com%2F2013%2F10%2Fusing-bootstrap-3-with-internet-explorer-8-ie8%2F&amp;locale=&amp;layout=button_count&amp;action=like&amp;width=92&amp;height=20&amp;colorscheme=light' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:92px; height:20px;' allowTransparency='true'></iframe></li>
+											<li><script type='text/javascript' src='https://apis.google.com/js/plusone.js'></script><g:plusone size='' href='http://www.telegraphicsinc.com/2013/10/using-bootstrap-3-with-internet-explorer-8-ie8/'></g:plusone></li>
+										</ul>									
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+									<p class="lead">In a recent website development project we had the struggle of conforming Bootstrap 3 to format correctly in IE8.</p>
+<p>After much digging we were able to find a solution that worked effectively for us and thought we&#8217;d pass along the help.</p>
+<h3>THE PROBLEM</h3>
+<p>Every col-* class we had setup within our document was running full width across the screen. It was as though every element had been set to col width of 12 and stretched all the way across the screen. Everything still stacked correctly, everything still looked alright, it was just ignoring any widths and/or floats that should have been implemented.</p>
+<h3>THE FAILED SOLUTIONS</h3>
+<p>Following the guidelines on the Bootstrap site, we were sure to correctly reference, and include, the respond.js. Which, was set within conditional comment for anything less than IE9. Tried adding Modernizer, thinking maybe THAT was problem. Re-referenced the bootstrap.css file to pull locally instead of from the CDN, since we saw THAT might be a solution as well.</p>
+<p>Somewhere online told us to use this meta tag:</p>
+<pre class="brush: php; title: ; notranslate" title="">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</pre>
+<p>Nothing was working. Like you, we even cursed IE, as is our right. So what did work?</p>
+<h3>THE SOLUTION</h3>
+<p>The answer, <a title="css3-mediaqueries-js on Google Code" href="https://code.google.com/p/css3-mediaqueries-js/" target="_blank">css3-mediaqueries-js</a>. This beautiful little javascript is as simple as including it on your page. Once included, the the script allows IE 5+, Firefox 1+ and Safari 2 to &#8220;transparently parse, test and apply CSS3 Media Queries.&#8221;</p>
+<pre class="brush: php; title: ; notranslate" title="">&lt;script src=&quot;assets/js/css3-mediaqueries.js&quot;&gt;&lt;/script&gt;</pre>
+<p>According to the author&#8217;s site, the script will not work with @imports, which you shouldn&#8217;t be using anyway. Additionaly, &#8220;[the script] won&#8217;t listen to the media attribute of the &lt;link&gt; and &lt;style&gt; elements.&#8221;</p>
+<p>Be sure to insert the script into the head area of your page. Unlike other scripts, you want to be sure this script is run before the entire page is parsed or the user may see a weird jumble as the page loads. Additionally, you can probably load this within a commented conditional statement to only run if the browser is less than IE9.</p>
+<p>Here&#8217;s a clip of the entire head area we created to ensure it functions correctly.</p>
+<pre class="brush: php; title: ; notranslate" title="">	&lt;link href=&quot;assets/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+	&lt;link href=&quot;//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css&quot; rel=&quot;stylesheet&quot;&gt;
+		
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/css/tg.css&quot; type=&quot;text/css&quot;/&gt;
+		
+	&lt;!-- Javascript --&gt;
+	&lt;script type='text/javascript' src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script type='text/javascript' src=&quot;assets/js/css3-mediaqueries.js&quot;&gt;&lt;/script&gt;	
+
+    &lt;!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --&gt;
+    &lt;!--[if lt IE 9]&gt;
+      &lt;script type='text/javascript' src=&quot;http://html5shiv.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+      &lt;script type='text/javascript' src=&quot;//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js&quot;&gt;&lt;/script&gt;
+    &lt;![endif]--&gt;
+</pre>
+<div class="well">
+<h3>THE TROUBLESHOOT</h3>
+<p>Be sure you&#8217;re loading Bootstrap.css locally and not through a CDN. Something with respond.js doesn&#8217;t allow it to parse the CSS correctly when it&#8217;s loaded through an @import or through the CDN.</p>
+<p><small class="pull-right"><em>Added January 2014</em></small></div>
+<p>Any other solutions, comments or praise are always welcome in the comments section. Hope this helped!</p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-12">
+									<p><small><em>Tags: <a href="http://www.telegraphicsinc.com/tag/css3/" rel="tag">css3</a>, <a href="http://www.telegraphicsinc.com/tag/ie/" rel="tag">IE</a>, <a href="http://www.telegraphicsinc.com/tag/rwd/" rel="tag">RWD</a></em></small></p>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-12">
+									<ul class="list-unstyled list-inline socialMedia">
+										<li><a href="http://twitter.com/share" class="twitter-share-button" data-url="http://www.telegraphicsinc.com/2013/10/using-bootstrap-3-with-internet-explorer-8-ie8/" data-count="horizontal" data-text="Using Bootstrap 3 with Internet Explorer 8 (IE8)" data-via="twitter_username" ></a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script></li>
+										<li><iframe src='http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.telegraphicsinc.com%2F2013%2F10%2Fusing-bootstrap-3-with-internet-explorer-8-ie8%2F&amp;locale=&amp;layout=button_count&amp;action=like&amp;width=92&amp;height=20&amp;colorscheme=light' scrolling='no' frameborder='0' style='border:none; overflow:hidden; width:92px; height:20px;' allowTransparency='true'></iframe></li>
+										<li><script type='text/javascript' src='https://apis.google.com/js/plusone.js'></script><g:plusone size='' href='http://www.telegraphicsinc.com/2013/10/using-bootstrap-3-with-internet-explorer-8-ie8/'></g:plusone></li>
+									</ul>																		
+								</div>
+							</div>
+							<hr />
+							<div class="row">
+								<div class="col-lg-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+									<div class="well" id="authorbio">
+										<div class="row">
+																					<div class="user-image col-lg-3 col-md-3 col-sm-3 hidden-xs">
+																								<a href="http://www.telegraphicsinc.com/employee/joe-martin/"><img src="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/uploads/2014/03/Joe-220x280.jpg" class="img-polaroid" /></a>
+											</div>
+											<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+												<h5>Written By</h5>
+												<h2><a href="http://www.telegraphicsinc.com/employee/joe-martin/">Joe Martin<small>Interactive Director for Telegraphics, Inc.</small></a></h2>
+												Joe Martin has over 14 years in the field of web design and development, with a Bachelor&#039;s degree in Interactive Media Design from the Art Institute.											</div>
+											<div class="clearfix"></div>
+																				</div>
+									</div>	
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">						
+									
+<div id="disqus_thread">
+                    <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-233">
+        <div id="dsq-comment-header-233" class="dsq-comment-header">
+            <cite id="dsq-cite-233">
+                <span id="dsq-author-user-233">Robbie Reynolds</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-233" class="dsq-comment-body">
+            <div id="dsq-comment-message-233" class="dsq-comment-message"><p>In a web development world where we still have to (unfortunately) deal with IE8 or less, I have been looking for a way to solve the incompatibilities between IE8 and bootstrap 3. I have implemented all of the above solutions you mentioned and to much frustration, still the @media queries are not rendering correctly in IE8.</p>
+<p>After discovering your blog about this issue, I implemented the css3-mediaqueries.js and now the pages load the body background, but no content. Very strange (and aggravating)!</p>
+<p>Did you include css3-mediaqueries.js along with html5-shiv.js and respond.js? If so, what order did you load them? Also, jquery.js loaded before or after?</p>
+<p>Is this correct?:</p>
+<p><!--[if lt IE 9]&gt;--></p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment odd alt depth-2" id="dsq-comment-238">
+        <div id="dsq-comment-header-238" class="dsq-comment-header">
+            <cite id="dsq-cite-238">
+                <span id="dsq-author-user-238">suitfits</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-238" class="dsq-comment-body">
+            <div id="dsq-comment-message-238" class="dsq-comment-message"><p>Same here&#8230; I would love to see the author answering Robbie&#8217;s doubts.<br />
+Could you show us a HEAD snippet with all the assets and ie conditionals that made up your solution?<br />
+Thanks for sharing anyway</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even depth-2" id="dsq-comment-245">
+        <div id="dsq-comment-header-245" class="dsq-comment-header">
+            <cite id="dsq-cite-245">
+                <span id="dsq-author-user-245">Marc Sch</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-245" class="dsq-comment-body">
+            <div id="dsq-comment-message-245" class="dsq-comment-message"><p>I&#8217;m just wondering if this could have anything to do with loading a test file locally in stead of through a webserver? I tested this and with me this made the difference</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment odd alt depth-3" id="dsq-comment-292">
+        <div id="dsq-comment-header-292" class="dsq-comment-header">
+            <cite id="dsq-cite-292">
+                <span id="dsq-author-user-292">rizerzero</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-292" class="dsq-comment-body">
+            <div id="dsq-comment-message-292" class="dsq-comment-message"><p>exactly what i have noticed on web server , just html5.shiv and respond.js does the job guys<br />
+remember that jquery is needed before all these js files and they need to be at the top of the of the page   </p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even depth-2" id="dsq-comment-248">
+        <div id="dsq-comment-header-248" class="dsq-comment-header">
+            <cite id="dsq-cite-248">
+                <span id="dsq-author-user-248">telegraphics</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-248" class="dsq-comment-body">
+            <div id="dsq-comment-message-248" class="dsq-comment-message"><p>Sorry for the delayed response, guys! Here&#8217;s a snippet from the head: </p>
+<p><code>&#060;!DOCTYPE html&#062;<br />
+&#060;html lang="en"&#062;<br />
+  &#060;head&#062;<br />
+    &#060;meta charset="utf-8"&#062;<br />
+    &#060;meta name="viewport" content="width=1170"&#062;<br />
+    &#060;meta name="description" content=""&#062;<br />
+    &#060;meta name="author" content=""&#062;<br />
+    &#060;link rel="shortcut icon" href="assets/img/favicon.png"&#062;<br />
+    &#060;meta http-equiv="X-UA-Compatible" content="IE=edge"&#062;</p>
+<p>    &#060;title&#062;Exploratorium&#060;/title&#062;<br />
+	&#060;link href='http://fonts.googleapis.com/css?family=Londrina+Solid|Open+Sans:400,700|Shadows+Into+Light+Two' rel='stylesheet' type='text/css'&#062;<br />
+    &#060;!-- Bootstrap core CSS --&#062;<br />
+    &#060;link href="assets/css/bootstrap.min.css" rel="stylesheet"&#062;<br />
+    &#060;link href="assets/css/bootstrap-select.min.css" rel="stylesheet"&#062;<br />
+    &#060;!-- Bootstrap theme --&#062;<br />
+&#060;!--     &#060;link href="assets/css/bootstrap-theme.min.css" rel="stylesheet"&#062; --&#062;<br />
+	&#060;link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"&#062;<br />
+    &#060;!-- Custom styles for this template --&#062;<br />
+    &#060;link href="style.css" rel="stylesheet"&#062;</p>
+<p>	&#060;script src="assets/js/modernizr.custom.51611.js"&#062;&#060;/script&#062;<br />
+	&#060;script src="assets/js/css3-mediaqueries.js"&#062;&#060;/script&#062;<br />
+    &#060;!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --&#062;<br />
+    &#060;!--[if lt IE 9]&#062;<br />
+      &#060;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&#062;&#060;/script&#062;<br />
+      &#060;script src="assets/js/respond.min.js"&#062;&#060;/script&#062;<br />
+    &#060;![endif]--&#062; </p>
+<p>  &#060;/head&#062;</code></p>
+<p>You can also preview this in it&#8217;s dev environment, before it went live, at: <a href="http://www.joemart.in/hampton/exploratorium/" rel="nofollow">http://www.joemart.in/hampton/exploratorium/</a></p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment odd alt depth-3" id="dsq-comment-360">
+        <div id="dsq-comment-header-360" class="dsq-comment-header">
+            <cite id="dsq-cite-360">
+                <span id="dsq-author-user-360">Bhavy</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-360" class="dsq-comment-body">
+            <div id="dsq-comment-message-360" class="dsq-comment-message"><p>awesome solution! Worked for me. Thanks a bunch tg! <img src="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-includes/images/smilies/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-246">
+        <div id="dsq-comment-header-246" class="dsq-comment-header">
+            <cite id="dsq-cite-246">
+                <span id="dsq-author-user-246">Terri</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-246" class="dsq-comment-body">
+            <div id="dsq-comment-message-246" class="dsq-comment-message"><p>This does not seem to do anything for me either in IE8. I still get the mobile styles in the IE8 desktop view. I am not loading a test file locally but via a web host. jQuery and a script are before the closing body tag.</p>
+<p>    SunTrust &ndash; Your Equity Line is Maturing. What are your options?</p>
+<p>    <!-- Bootstrap core CSS --></p>
+<p>    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --></p>
+<p>    <!--[if lt IE 9]&gt;--></p>
+<p>    <!-- Custom styles for this template --></p>
+<p>some styles here</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment odd alt depth-2" id="dsq-comment-249">
+        <div id="dsq-comment-header-249" class="dsq-comment-header">
+            <cite id="dsq-cite-249">
+                <span id="dsq-author-user-249">telegraphics</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-249" class="dsq-comment-body">
+            <div id="dsq-comment-message-249" class="dsq-comment-message"><p>Terri,</p>
+<p>My guess is that you&#8217;re still going to need the IE specific stylesheets Bootstrap provides, by default. </p>
+<p><code>&#060;!--HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries --&#062;<br />
+&#060;!--[if lt IE 9]&#062;<br />
+&#060;script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"&#062;&#060;/script&#062;<br />
+&#060;script src="assets/js/respond.min.js"&#062;&#060;/script&#062;<br />
+&#060;![endif]--&#062;</code></p>
+<p>You can grab the respond.min.js file here: <a href="http://www.joemart.in/hampton/exploratorium/assets/js/respond.min.js" rel="nofollow">http://www.joemart.in/hampton/exploratorium/assets/js/respond.min.js</a></p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment even depth-3" id="dsq-comment-267">
+        <div id="dsq-comment-header-267" class="dsq-comment-header">
+            <cite id="dsq-cite-267">
+                <span id="dsq-author-user-267">corky</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-267" class="dsq-comment-body">
+            <div id="dsq-comment-message-267" class="dsq-comment-message"><p>Not stylesheets, those are javascript files.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-259">
+        <div id="dsq-comment-header-259" class="dsq-comment-header">
+            <cite id="dsq-cite-259">
+                <span id="dsq-author-user-259">jz</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-259" class="dsq-comment-body">
+            <div id="dsq-comment-message-259" class="dsq-comment-message"><p>For me, all i had to include was respond.js to fix this problem &#8212; as specified on the bootstrap &#8220;getting started&#8221; page under &#8220;browser and device support&#8221;.  I did not need css3-mediaqueries</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-265">
+        <div id="dsq-comment-header-265" class="dsq-comment-header">
+            <cite id="dsq-cite-265">
+                <span id="dsq-author-user-265">Putu</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-265" class="dsq-comment-body">
+            <div id="dsq-comment-message-265" class="dsq-comment-message"><p>thankyou, this really helpfull</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-266">
+        <div id="dsq-comment-header-266" class="dsq-comment-header">
+            <cite id="dsq-cite-266">
+                <span id="dsq-author-user-266">Steph</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-266" class="dsq-comment-body">
+            <div id="dsq-comment-message-266" class="dsq-comment-message"><p>Thanks, it helped me a lot after searching a few hours</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-270">
+        <div id="dsq-comment-header-270" class="dsq-comment-header">
+            <cite id="dsq-cite-270">
+                <span id="dsq-author-user-270">Corneliu</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-270" class="dsq-comment-body">
+            <div id="dsq-comment-message-270" class="dsq-comment-message"><p>The respond.js has to pass the same-origin policy in order to function in IE, otherwise it will fail silently. First of all, you have to load this library locally, and not by using a CDN lile cdnjs.cloudflare.com</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-271">
+        <div id="dsq-comment-header-271" class="dsq-comment-header">
+            <cite id="dsq-cite-271">
+                <span id="dsq-author-user-271">NaWiMa</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-271" class="dsq-comment-body">
+            <div id="dsq-comment-message-271" class="dsq-comment-message"><p>How come you decided to use all four of the javascript libraries to deal with the IE 8 issue? I work extensively with IE8 and have simply included the HTML5.js and RESPONSE.js libraries with an external link and backup local copy without any issues reported. Curious if you have seen users fall through the HTML5 and RESPONSE.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-277">
+        <div id="dsq-comment-header-277" class="dsq-comment-header">
+            <cite id="dsq-cite-277">
+                <span id="dsq-author-user-277">JD Hendrickson</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-277" class="dsq-comment-body">
+            <div id="dsq-comment-message-277" class="dsq-comment-message"><p>Thank you!!  This was exactly the solution I was looking for.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-281">
+        <div id="dsq-comment-header-281" class="dsq-comment-header">
+            <cite id="dsq-cite-281">
+                <span id="dsq-author-user-281">Juan Pujol</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-281" class="dsq-comment-body">
+            <div id="dsq-comment-message-281" class="dsq-comment-message"><p>Guys, I had a problem with this and none of your solutions seem to solved. It so happens the problem was with the minification using uglify on my Gruntfile.js. Witch was causing some incompatibilities with select2.js. Anyways. Add this to your grunt tasks.</p>
+<p><code><br />
+uglify: {<br />
+  options: {<br />
+    beautify : {<br />
+      beautify: false,<br />
+      ascii_only: true, // this is the important one.<br />
+      quote_keys: true<br />
+    }<br />
+  }<br />
+}</p>
+<p></code></p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-282">
+        <div id="dsq-comment-header-282" class="dsq-comment-header">
+            <cite id="dsq-cite-282">
+                <span id="dsq-author-user-282">Keith Holliday</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-282" class="dsq-comment-body">
+            <div id="dsq-comment-message-282" class="dsq-comment-message"><p>Thanks for this solution! At my job we still support IE8, and I was having trouble with compatibility.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-293">
+        <div id="dsq-comment-header-293" class="dsq-comment-header">
+            <cite id="dsq-cite-293">
+                <span id="dsq-author-user-293">Shamick</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-293" class="dsq-comment-body">
+            <div id="dsq-comment-message-293" class="dsq-comment-message"><p>Thanks Joe Martin!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-294">
+        <div id="dsq-comment-header-294" class="dsq-comment-header">
+            <cite id="dsq-cite-294">
+                <span id="dsq-author-user-294">Nicola Elvin</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-294" class="dsq-comment-body">
+            <div id="dsq-comment-message-294" class="dsq-comment-message"><p>The comment about a local verison of bootstrap saved me.  Thanks, I had been debugging this for an hour!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-298">
+        <div id="dsq-comment-header-298" class="dsq-comment-header">
+            <cite id="dsq-cite-298">
+                <span id="dsq-author-user-298">Hir dihora</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-298" class="dsq-comment-body">
+            <div id="dsq-comment-message-298" class="dsq-comment-message"><p>css3-mediaqueries.js not working any media query in ie8! please give me better solution..Thanks</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-344">
+        <div id="dsq-comment-header-344" class="dsq-comment-header">
+            <cite id="dsq-cite-344">
+http://thefoldrock.com                <span id="dsq-author-user-344">dmcastady</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-344" class="dsq-comment-body">
+            <div id="dsq-comment-message-344" class="dsq-comment-message"><p>This post saved my tail on SEVERAL bootstrap sites I&#8217;ve launched recently that all had this same problem! </p>
+<p>Best post I&#8217;ve ever seen on this topic, from a writing standpoint, and with solutions that ACTUALLY worked. </p>
+<p>Praise to tg!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-347">
+        <div id="dsq-comment-header-347" class="dsq-comment-header">
+            <cite id="dsq-cite-347">
+                <span id="dsq-author-user-347">Fiyin Bamigbola</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-347" class="dsq-comment-body">
+            <div id="dsq-comment-message-347" class="dsq-comment-message"><p>Thanks a lot worked like a charm&#8230;:) a simple solution to a 2hour problem</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-358">
+        <div id="dsq-comment-header-358" class="dsq-comment-header">
+            <cite id="dsq-cite-358">
+http://www.lemieux-design.net                <span id="dsq-author-user-358">Al Lemieux</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-358" class="dsq-comment-body">
+            <div id="dsq-comment-message-358" class="dsq-comment-message"><p>None of this worked for me. I included in this order: Modernizr, css3-mediaqueries.js (the link was broken by the way), bootstrap.min.js. </p>
+<p>In a conditional statement for IE8 i&#8217;ve included the HTML5 shiv and the respond.min.js. </p>
+<p>All of the content is still flowing across 12 columns.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-364">
+        <div id="dsq-comment-header-364" class="dsq-comment-header">
+            <cite id="dsq-cite-364">
+                <span id="dsq-author-user-364">vidya</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-364" class="dsq-comment-body">
+            <div id="dsq-comment-message-364" class="dsq-comment-message"><p>thank you i got the solution</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-365">
+        <div id="dsq-comment-header-365" class="dsq-comment-header">
+            <cite id="dsq-cite-365">
+                <span id="dsq-author-user-365">vidya</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-365" class="dsq-comment-body">
+            <div id="dsq-comment-message-365" class="dsq-comment-message"><p>i am facing problem like  is not working for xs md any solutions can i accept</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-366">
+        <div id="dsq-comment-header-366" class="dsq-comment-header">
+            <cite id="dsq-cite-366">
+                <span id="dsq-author-user-366">Kapil</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-366" class="dsq-comment-body">
+            <div id="dsq-comment-message-366" class="dsq-comment-message"><p>Great work thank you,, Will this code work for bootstrap 2.3 version ? Please reply</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-386">
+        <div id="dsq-comment-header-386" class="dsq-comment-header">
+            <cite id="dsq-cite-386">
+                <span id="dsq-author-user-386">Mike Hansen</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-386" class="dsq-comment-body">
+            <div id="dsq-comment-message-386" class="dsq-comment-message"><p>I have this exact issue, the link to acess the script is broken. Is there an updated link?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-390">
+        <div id="dsq-comment-header-390" class="dsq-comment-header">
+            <cite id="dsq-cite-390">
+                <span id="dsq-author-user-390">aggu mallesh</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-390" class="dsq-comment-body">
+            <div id="dsq-comment-message-390" class="dsq-comment-message"><p>Am facing the same problem in IE9, no clue why. can some one give any solutions?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-391">
+        <div id="dsq-comment-header-391" class="dsq-comment-header">
+            <cite id="dsq-cite-391">
+                <span id="dsq-author-user-391">John D</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-391" class="dsq-comment-body">
+            <div id="dsq-comment-message-391" class="dsq-comment-message"><p>I get to deal with this starting next week. Starting to build out many applications that will have IE8 dependencies. I can&#8217;t wait. IE8 and IE9 turn a good time into pure frustration.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-395">
+        <div id="dsq-comment-header-395" class="dsq-comment-header">
+            <cite id="dsq-cite-395">
+                <span id="dsq-author-user-395">Gary Grubb</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-395" class="dsq-comment-body">
+            <div id="dsq-comment-message-395" class="dsq-comment-message"><p>respond.js allowed my IE8 clients to work&#8230;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-398">
+        <div id="dsq-comment-header-398" class="dsq-comment-header">
+            <cite id="dsq-cite-398">
+                <span id="dsq-author-user-398">thilini chatumali</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-398" class="dsq-comment-body">
+            <div id="dsq-comment-message-398" class="dsq-comment-message"><p>thanks.i got the solution for my proble</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var disqus_url = 'http://www.telegraphicsinc.com/2013/10/using-bootstrap-3-with-internet-explorer-8-ie8/';
+    var disqus_identifier = '1208 http://www.telegraphicsinc.com/?p=1208';
+    var disqus_container_id = 'disqus_thread';
+    var disqus_domain = 'disqus.com';
+    var disqus_shortname = 'telegraphics';
+    var disqus_title = "Using Bootstrap 3 with Internet Explorer 8 (IE8)";
+    var disqus_config = function () {
+        var config = this; // Access to the config object
+        config.language = '';
+
+        /* Add the ability to add javascript callbacks */
+        
+        /*
+           All currently supported events:
+            * preData — fires just before we request for initial data
+            * preInit - fires after we get initial data but before we load any dependencies
+            * onInit  - fires when all dependencies are resolved but before dtpl template is rendered
+            * afterRender - fires when template is rendered but before we show it
+            * onReady - everything is done
+         */
+
+        config.callbacks.preData.push(function() {
+            // clear out the container (its filled for SEO/legacy purposes)
+            document.getElementById(disqus_container_id).innerHTML = '';
+        });
+                config.callbacks.onReady.push(function() {
+            // sync comments in the background so we don't block the page
+            var script = document.createElement('script');
+            script.async = true;
+            script.src = '?cf_action=sync_comments&post_id=1208';
+
+            var firstScript = document.getElementsByTagName( "script" )[0];
+            firstScript.parentNode.insertBefore(script, firstScript);
+        });
+                    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+    var DsqLocal = {
+        'trackbacks': [
+        ],
+        'trackback_url': "http:\/\/www.telegraphicsinc.com\/2013\/10\/using-bootstrap-3-with-internet-explorer-8-ie8\/trackback\/"    };
+/* ]]> */
+</script>
+
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.' + 'disqus.com' + '/' + 'embed' + '.js' + '?pname=wordpress&pver=2.77';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+/* ]]> */
+</script>
+								</div>
+							</div>
+
+						</article>	
+				
+				</section>
+				
+				<aside class="col-lg-3 col-md-4 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-0 col-sm-offset-0 col-xs-offset-0">
+					<!-- ==============================================
+ASIDE
+=============================================== -->
+	<div class="the-side">					
+		<div id="text-2" class="widgetcontainer widget_text">			<div class="textwidget"><h4><em>Some of our thoughts on tech products, coding and best practices.</em></h4></div>
+		</div><!-- /.widget --><div id="search-4" class="widgetcontainer widget_search"><form role="search" method="get" id="searchform" action="http://www.telegraphicsinc.com/">
+	<label class="screen-reader-text" for="s">Search for:</label>
+	<div class="input-group">
+		<input type="text"  class="form-control" value="" name="s" id="s" placeholder="Search the Site...">
+		<div class="input-group-btn">
+			<button type="submit" class="btn btn-default" id="searchsubmit"><i class="fa fa-search"></i></button>
+		</div>
+	</div>
+</form>
+
+
+</div><!-- /.widget --><div id="text-5" class="widgetcontainer widget_text">			<div class="textwidget"><a target="_blank" href="http://www.shareasale.com/r.cfm?b=628735&u=941766&m=41388&urllink=&afftrack="><img src="http://www.shareasale.com/image/41388/WPE-HeatWave14-300x250.gif" border="0" alt="WP Engine HeatWave14 Special Offer" class="img-responsive"></a></div>
+		</div><!-- /.widget --><div id="text-4" class="widgetcontainer widget_text"><h3>Work With Us</h3>			<div class="textwidget"><p>As our team continues to grow, we're looking for talented people to work with.</p>
+<p><a class="btn btn-primary" href="http://www.telegraphicsinc.com/backend-website-developer/"><i class="fa fa-user icon"></i>View Openings &nbsp;</a></p></div>
+		</div><!-- /.widget --><div id="categories-2" class="widgetcontainer widget_categories"><h3>Categories</h3>		<ul>
+	<li class="cat-item cat-item-25"><a href="http://www.telegraphicsinc.com/category/business/" >Business</a> (6)
+</li>
+	<li class="cat-item cat-item-23"><a href="http://www.telegraphicsinc.com/category/coding/" >Coding</a> (16)
+</li>
+	<li class="cat-item cat-item-22"><a href="http://www.telegraphicsinc.com/category/design/" >Design</a> (1)
+</li>
+	<li class="cat-item cat-item-85"><a href="http://www.telegraphicsinc.com/category/featured-project/" >Featured Project</a> (4)
+</li>
+	<li class="cat-item cat-item-26"><a href="http://www.telegraphicsinc.com/category/news/" >News</a> (4)
+</li>
+	<li class="cat-item cat-item-24"><a href="http://www.telegraphicsinc.com/category/social-media/" >Social Media</a> (1)
+</li>
+	<li class="cat-item cat-item-83"><a href="http://www.telegraphicsinc.com/category/third-party-applications/" >Third Party Applications</a> (6)
+</li>
+		</ul>
+</div><!-- /.widget -->		<div id="recent-posts-2" class="widgetcontainer widget_recent_entries">		<h3>Latest posts</h3>		<ul>
+					<li>
+				<a href="http://www.telegraphicsinc.com/2014/07/the-5-email-addresses-every-business-needs/">The 5 Email Addresses Every Business Needs</a>
+						</li>
+					<li>
+				<a href="http://www.telegraphicsinc.com/2014/06/10-reasons-you-need-a-blog-writer/">10 Reasons You Need a Blog Writer</a>
+						</li>
+					<li>
+				<a href="http://www.telegraphicsinc.com/2014/05/acf-error-maximum-execution-time-exceeded/">PHP Fatal error: Maximum execution time exceeded — Advanced Custom Fields</a>
+						</li>
+					<li>
+				<a href="http://www.telegraphicsinc.com/2014/05/wordpress-gravity-forms-not-working-on-godaddy-hosting/">Forms Not Working on GoDaddy Hosting</a>
+						</li>
+					<li>
+				<a href="http://www.telegraphicsinc.com/2014/05/wordpress-image-sizes-not-working/">WordPress Image Sizes Not Working</a>
+						</li>
+				</ul>
+		</div><!-- /.widget --><div id="text-3" class="widgetcontainer widget_text">			<div class="textwidget">						<ul id="social" class="list-inline list-unstyled">
+							<li><a href="http://twitter.com/telegraphicsinc" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+							<li><a href="https://www.facebook.com/telegraphics" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+							<li><a href="http://www.linkedin.com/company/telegraphics-inc-" target="_blank"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+							<li><a href="http://pinterest.com/telegraphics" target="_blank"><i class="fa fa-pinterest-square fa-2x"></i></a></li>
+							<li><a href="http://vimeo.com/telegraphics/" target="_blank"><i class="fa fa-vimeo-square fa-2x"></i></a></li>
+							<li><a href="http://google.com/+TelegraphicsIncSchillerPark" target="_blank"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+						</ul>
+<div class="clearfix"></div></div>
+		</div><!-- /.widget -->	</div>
+<!-- ==============================================
+/ASIDE
+=============================================== -->
+				</aside>
+			</div>	
+		</div>		
+
+
+
+
+
+		<!-- ==============================================
+		CONTACT
+		=============================================== -->	
+		<section id="contact" class="dark-bg light-typo padding-top">
+			<div class="container">
+
+				
+					<div class="scrollimation scale-in">
+						<div class="row">
+							<div class="col-lg-1 col-md-2 col-sm-2 col-xs-3 hidden-xs">
+								 <img src="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/images/tg-letters.png" class="img-responsive" />
+							</div>
+							<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-push-5 col-md-push-5 col-sm-push-5">
+								<p>Tips on improving your existing site, the latest from Google and more.</p>
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="Keep Current with the TG Newsletter">
+									<span class="input-group-btn">
+										<button class="btn btn-primary" type="button">Go!</button>
+									</span>
+								</div><!-- /input-group -->	
+							</div>
+							<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 col-lg-pull-5 col-md-pull-5 col-sm-pull-5">
+								<small>
+									<div itemscope itemtype="http://schema.org/Organization">
+										<span itemprop="name">Telegraphics, Inc.</span><br />
+										<span itemprop="description">An Interactive Media Company</span>
+										<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+												<span itemprop="streetAddress">9703 Cary Ave</span><br />
+												<span itemprop="addressLocality">Schiller Park</span>, <span itemprop="addressRegion">IL</span> <span itemprop="postalCode">60176</span>
+										</div>
+										<i class="fa fa-phone icon"></i><a itemprop="telephone" href="tel:8478349327">847-834-9327</a><br />
+										<i class="fa fa-envelope icon"></i><a itemprop="email" href="mailto:info@telegraphicsinc.com">info@telegraphicsinc.com</a><br />
+										<i class="fa fa-user icon"></i><a itemprop="email" href="mailto:support@telegraphicsinc.com">support@telegraphicsinc.com</a>
+									</div>
+								</small>
+							</div>
+						</div>
+					</div>
+				
+			</div>
+		</section>
+		
+		<!-- ==============================================
+		FOOTER
+		=============================================== -->	
+		
+		<footer id="main-footer" class="dark-bg light-typo">
+		
+			<div class="container">
+			
+				<hr>
+				
+				<div class="row">
+				
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<ul class="social-links">
+							<li class="scrollimation fade-right"><a target="_blank" href="http://www.facebook.com/telegraphics"><i class="fa fa-facebook fa-fw"></i></a></li>
+							<li class="scrollimation fade-right d2"><a target="_blank" href="https://twitter.com/telegraphicsinc"><i class="fa fa-twitter fa-fw"></i></a></li>
+							<li class="scrollimation fade-right d3"><a target="_blank" href="http://google.com/+TelegraphicsIncSchillerPark"><i class="fa fa-google-plus fa-fw"></i></a></li>
+							<li class="scrollimation fade-right d4"><a target="_blank" href="http://www.pinterest.com/telegraphics/"><i class="fa fa-pinterest fa-fw"></i></a></li>
+							<li class="scrollimation fade-right d5"><a target="_blank" href="http://www.linkedin.com/company/telegraphics-inc-"><i class="fa fa-linkedin fa-fw"></i></a></li>
+							<li class="scrollimation fade-right d6"><a target="_blank" href="http://vimeo.com/telegraphics"><i class="fa fa-vimeo-square fa-fw"></i></a></li>
+						</ul>
+					</div>
+					
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right">
+						<p id="copyright">&copy;2015 Telegraphics, Inc. All Rights Reserved. <a href="http://www.telegraphicsinc.com/privacy-policy">Privacy Policy</a> | <a href="http://www.telegraphicsinc.com/terms-of-use">Terms of Use</a></p>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</footer>
+		
+	
+		<!-- ==============================================
+		SCRIPTS
+		=============================================== -->	
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/flexslider/2.2.0/jquery.flexslider.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/masonry/3.1.2/masonry.pkgd.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.11/jquery.scrollTo.js"></script>
+
+		<script src="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/js/jquery.label_better.min.js"></script>
+		<script src="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/js/jquery.easypiechart.min.js"></script>
+		<script src="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/js/contact.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+		<script src="http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/themes/tg-base/library/js/tg.min.js"></script>
+
+		<script type="text/javascript">
+
+			$(function() {
+			  $('a[href*=#]:not([href=#])').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html,body').animate({
+			          scrollTop: target.offset().top
+			        }, 1000);
+			        return false;
+			      }
+			    }
+			  });
+			});	
+		</script>
+
+
+<script type="text/javascript">
+	$('#gform_fields_7').addClass('list-inline');
+	$('.gform_title').addClass('scrollimation scale-in in');
+</script>
+
+<!-- BEGIN PRIVY WIDGET CODE -->
+ <script type='text/javascript'>
+ var _d_site = _d_site || '7817656D3E3F4459C8F3B473'; (function() { var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true; script.src = document.location.protocol + '//widget.privy.com/assets/widget.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s); })();
+ </script>
+ <!-- END PRIVY WIDGET CODE -->
+ 
+
+ <script>
+ //FLEXSLIDER
+ 	$(document).ready( function() {
+	 	$('#home-flexslider').flexslider({
+		 	animation: 'slide',
+		 	slideshow: false,
+		 	prevText: '<i class="fa fa-angle-left"></i>',
+		 	nextText: '<i class="fa fa-angle-right"></i>',
+		 	
+	 	});
+	 	$('#project-flexslider').flexslider({
+		 	animation: 'slide',
+		 	slideshow: true,
+		 	slideshowSpeed: 3000,
+		 	pauseOnHover: true,
+		 	prevText: '<i class="fa fa-angle-left"></i>',
+		 	nextText: '<i class="fa fa-angle-right"></i>',
+		 });
+ 	});
+ </script>
+ 
+ <script>
+ 	//Before After Toggle
+ 	$(function() {
+ 		//Before After Toggle
+ 		var flag = true;
+ 		$('#before-after').mouseenter(function(){
+	 		if (flag === true) {
+	 			$('#before-after-btn').removeClass('before-button', 'slow').addClass('after-button', 'slow');
+			 	$('#before').animate({bottom: '-=95px'}, 1000);
+		        $('#after').animate({bottom: '+=95px'}, 1000);
+		        flag = false;
+		    }
+	 	});
+	 	
+	 	//Add double carets to case studies list items
+	 	var $caret = '<i class="fa fa-angle-double-right icon"></i>';
+	 	$('.single-project #overview-content li').prepend($caret);
+	 	
+	 	//The fold video
+	 	$(function() {
+		 	var $img = $('.postid-155 #modules section:nth-child(3) img');
+		 	var embed = '<iframe src="//www.youtube.com/embed/oqRs7yoBVlY" frameborder="0" allowfullscreen></iframe>';
+		 	$img.after(embed);
+	 	});
+ 	});
+ </script>
+ 
+ 	<script type='text/javascript' src='http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shCore.js?ver=3.0.9'></script>
+<script type='text/javascript' src='http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/scripts/shBrushPhp.js?ver=3.0.9'></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "http://www.telegraphicsinc.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "http://www.telegraphicsinc.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<script type='text/javascript' src='http://3boijs1q659knfoev6zas39gs.wpengine.netdna-cdn.com/wp-includes/js/comment-reply.min.js?ver=4.2.2'></script>
+
+</body>
+</html>
