@@ -197,8 +197,9 @@
 	  <div class="form-group">
 	    <div class="col-md-6 col-md-offset-3">
 	      <!-- data-toggle= "modal" data-target=".confirmation-modal-lg" class="btn btn-warning" -->
-              <button class="btn btn-warning" id="submit" name="submit" type="submit" value="Form Submit" onclick="gogogo();"/>
-		<span class="glyphicon glyphicon-fire"></span> send</button> 
+              <button class="btn btn-warning" id="submit" name="submit" type="submit" value="Form Submit">
+		<span class="glyphicon glyphicon-fire"></span> send
+	      </button> 
               <!-- Confirmation Modal -->
               <div id="popupthing" class="modal fade" aria-labelledby="popupthing" aria-hidden="true">
                   <div class="modal-dialog">
@@ -257,21 +258,24 @@
       <script src="js/vendor/bootstrap.min.js"></script>
 
       <script type="text/javascript">
-	function gogogo() {
         $('#ajax-form').submit(function(){
+
           $.ajax({
 	    method: "POST",
-	    url: "http://formspree.io/nicholasjmerritt+forms@gmail.com",
+<!--	    url: "http://formspree.io/nicholasjmerritt+forms@gmail.com", -->
+            url: "http://formspree.io/njm3@rice.edu",
             data: $('#ajax-form').serialize(),
             dataType: "json"
           });
+
 	  $(popupthing).modal('show');
-	  document.getElementById('yoemail').value = ""
-	  document.getElementById('yoname').value = ""
-	  document.getElementById('yomessage').value = ""
+
+	  document.getElementById('yoemail').value = "";
+	  document.getElementById('yoname').value = "";
+	  document.getElementById('yomessage').value = "";
+
           return false;
         });
-	}
       </script>
       
       <!-- JQuery Easing -->
