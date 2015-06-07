@@ -7,3 +7,13 @@ body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
+
+.modal-backdrop.in {
+  opacity: 0.40;
+  filter: alpha(opacity=40);
+}
+
+.modal-backdrop.fade {
+  opacity: .3;
+  filter: alpha(opacity=30);
+}
