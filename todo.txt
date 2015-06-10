@@ -1,8 +1,9 @@
 getbootstrap.com/examples/cover - could be simpler and just better. and nicer. and cooler.
 
 aventure - use web.py to make aventure game actually work on the web
+	 or pyjamas?
 	 orrrr just rewrite in javascript
 
-pewpew - make a simple unity game maybe?
+pewpew - PHASER!
 
 background for jumbotron
