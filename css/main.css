@@ -17,3 +17,9 @@ body {
   opacity: .3;
   filter: alpha(opacity=30);
 }
+
+p {
+  line-height: 1.5;
+  margin-top: 0em;
+  margin-bottom: 1.5em;
+}
