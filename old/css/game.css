@@ -1,0 +1,59 @@
+/* 
+AVENTURE GAME!!!!!
+
+reborn in a fiery ball of javascript
+
+(c) nick merritt 2015
+
+send complaints, etc to nicholasjmerritt@gmail.com
+*/
+
+
+body {
+	background-color: black;
+	padding-top:50px;
+	padding-bottom:20px;   /* Height of the footer */	
+}
+
+#container {
+	color: white;
+}
+
+#console {
+	background-color: black; 
+	color: white;
+	height: 500px;
+	overflow: auto;
+}
+
+#console p {
+	color: white;
+	display: none;
+	font-size: 17px;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+#command_line {
+	color: white;
+	display: none;
+	font-size: 17px;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+input {
+	background-color: black;
+	color: white;
+	border: 1px solid #333;
+	font-size: 17px;
+}
+
+input:focus {
+	outline: none;
+}
+
+/*#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px; 
+}*/

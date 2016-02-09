@@ -1,4 +1,5 @@
 
+
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -8,18 +9,22 @@ body {
     padding-bottom: 20px;
 }
 
-.modal-backdrop.in {
-  opacity: 0.40;
-  filter: alpha(opacity=40);
+img {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.modal-backdrop.fade {
-  opacity: .3;
-  filter: alpha(opacity=30);
-}
 
-p {
-  line-height: 1.5;
-  margin-top: 0em;
-  margin-bottom: 1.5em;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
