@@ -1,10 +1,16 @@
 
 //TODO more reasonable words
-// current request is just nouns from a moderate amount of corpuses. corpi??
+// current request is just nouns that appear in a moderate amount of corpuses. corpi??
 word_url = "http://api.wordnik.com:80/v4/words.json/randomWord?hasDictionaryDef=true&includePartOfSpeech=noun&minCorpusCount=9000&maxCorpusCount=-1&minDictionaryCount=1&maxDictionaryCount=-1&minLength=5&maxLength=-1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5";
 
 definition_url_start = "http://api.wordnik.com:80/v4/word.json/";
 definition_url_end = "/definitions?limit=1&includeRelated=false&sourceDictionaries=all&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5";
+
+word = "";
+definition = "";
+
+score = 0;
+guesses = 0;
 
 function say(msg, delay) {
     if (!msg) {
@@ -28,11 +34,6 @@ function draw() {
 
 function new_game() {
 
-    $("#input_word").val("");
-    
-    word = "";
-    definition = "";
-
     new_word();
     
     score = 0;
@@ -42,14 +43,15 @@ function new_game() {
 
 function new_word() {
 
-    $("#input_word").val("");
+    word = "";
+    definition = "";
 
     //event.preventDefault(); // To prevent following the link
 
     //retrieve word
     $.get( word_url, function( data ) {
         // say ("word loaded: " + data.word);
-        word = data.word;
+        word = data.word.toLowerCase();
 
         //retrieve definition
         $.get( definition_url_start + word + definition_url_end, function( data ) {
@@ -61,35 +63,43 @@ function new_word() {
         });
 
     });
-    
 
 };
 
+$(document).ready(function() {
+
+    $("form").submit(guess);
+
+});
+
 //TODO type 'n' for new word, 'g' for new game??
+// min word length is 5 so shortcuts are possible
 //TODO show first letter of word?
 //TODO tweak params to make easier / harder? or have "easy" and "hard" buttons
 //TODO sanitize output to remove mention of word
 
-$(document).ready(function() {
+function guess() {
 
-    new_game();
-
-    $("form").submit(function() {
-
-        // careful, this is a global var
-        cli_input = $("#input_word").val().toLowerCase();
-
-        $('<p class="text-left" style="color:green" id="input">' + cli_input + '</p>').appendTo("#display").fadeIn(1 * 1000);
-        
-        // check guess
-        if (cli_input != "" && cli_input == word) {
-            score++;
+    // careful, this is a global var
+    cli_input = $("#input_word").val().toLowerCase();
+    
+    // check guess
+    if (cli_input != "") {
+        if (cli_input == "g") {
+            new_game();
+        } else if (cli_input == "n") {
             new_word();
+        } else if (word != "") {
+            guesses++;
+            if (cli_input == word) {
+                score++;
+                new_word();
+            } else {
+                draw();
+            }
         }
-        guesses++;
+    }
 
-        draw();
-
-    });
-
-});
+    $("#input_word").val("");
+    
+};
