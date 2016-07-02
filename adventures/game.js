@@ -1,29 +1,29 @@
 //////// AVENTURE GAME!!!!! /////////
-
+//
 // reborn in a fiery ball of javascript
-
+//
 // (c) nick merritt 2015
-
+//
 // send complaints, etc to nicholasjmerritt@gmail.com
 
+// TODO change the name from AVENTURE to something cool-sounding I found on the internet
 
-
-// TODO: better parsing
+// TODO still need better parsing? nah...
 //
-// verb noun [conj noun]
+// verb [noun] is good enough for me
 
 
 
 ////// global variables  //////
 
 current_room = null;    // Room object, will change with every visit()
-player = null;          // Player object, will rarely change  
+player = null;          // Player object, will rarely change
 items = [];             // Current items in scope for inspecting / picking up, etc
 
 // Strings, will change with every $("#command_line").val()
 cli_tokens = [];
-verb = '';
-noun = '';
+verb = "";
+noun = "";
 
 dead = false; //duh
 
@@ -42,12 +42,13 @@ Array.prototype.compact = function() {
 ////// utility functions //////
 
 function say(msg, delay) {
-    if (!msg) {
-        $('<p><br></p>').appendTo("#console"); //TODO ytf doesn't this work
-    } else {
-        if (!delay) var delay = 1;
-        $('<p>' + String(msg) + '</p>').appendTo("#console").fadeIn(delay * 1000);
+    if (!msg || msg == "") {
+        msg = "<br>";
     }
+    if (!delay) {
+        delay = 1;
+    }
+    $("#console").append("<p>" + String(msg) + "</p>").fadeIn(delay * 1000);
 }
 
 function random_choice(input_array) {
@@ -61,18 +62,20 @@ function visit(room) {
 }
 
 function verbis() {
-    for (var i = 0; i < arguments.length; ++i)
+    for (var i = 0; i < arguments.length; ++i) {
         if (verb == arguments[i])
             return true;
-        return false;
     }
+    return false;
+}
 
-    function nounis() {
-        for (var i = 0; i < arguments.length; ++i)
-            if (noun == arguments[i])
-                return true;
-            return false;
-        }
+function nounis() {
+    for (var i = 0; i < arguments.length; ++i) {
+        if (noun == arguments[i])
+            return true;
+    }
+    return false;
+}
 
 
 ////// console utility functions //////
@@ -84,9 +87,11 @@ function clc() {
 function death() {
     say("You die a horrible and painful death.", 5);
     dead = true;
-    $("#container").fadeOut(7000, function() {
-        //$('#footer').empty(); //TODO copyright or no?
-        $('#footer').prepend("<p>bwahahahahaha u suck</p>");
+    $("#console").fadeOut(7000, function() {
+        $("#footer").hide();
+        $("#command_line").removeAttr("autofocus");
+        $("#command_line").hide();
+        $("#spacing").append('<p class="text-center">bwahaha u suck</p>');
     });
 }
 
@@ -94,11 +99,11 @@ function death() {
 ////// word / phrase functions //////
 
 function random_adj() {
-    return random_choice(['Purple', 'Spotted', 'Gnarled', 'Rusty', 'Periwinkle']);
+    return random_choice(["Purple", "Spotted", "Gnarled", "Rusty", "Periwinkle"]);
 }
 
 function random_noun() {
-    return random_choice(['Stone', 'Bucket', 'Goblin', 'Hangnail']);
+    return random_choice(["Stone", "Bucket", "Goblin", "Hangnail"]);
 }
 
 function tavern_epithet() {
@@ -120,7 +125,7 @@ function tavern_epithet() {
 var Container = function (epithet) {
 
     this.epithet = epithet;
-    this.backstory = '';
+    this.backstory = "";
     this.items = [];
 
 };
@@ -392,8 +397,8 @@ $(document).ready(function() {
                 }
             }
 
-            else if (verbis("drop")) {
-                if (noun !== '') {
+            else if (verbis("drop", "d")) {
+                if (noun !== "") {
                     player.drop(noun);
                 } else {
                     say("You drop to the floor and flail wildly.");
@@ -475,13 +480,9 @@ $(document).ready(function() {
             }
 
 
-            //'hidden' directions
+            //'hidden' direction
             else if (verbis("up", "u")) {
                 current_room.up();
-            }
-
-            else if (verbis("down", "d")) {
-                current_room.down();
             }
 
 
@@ -506,7 +507,9 @@ $(document).ready(function() {
         }
 
         //reset cli
-        $("#console").scrollTop($("#console")[0].scrollHeight);
         $("#command_line").val("");
+        $("#console").scrollTop($("#console")[0].scrollHeight + 100);
     });
+
+    //$("#console").scrollTop($("#console")[0].scrollHeight - 100);
 });
