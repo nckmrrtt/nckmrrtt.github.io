@@ -6,6 +6,7 @@ word_url = "http://api.wordnik.com:80/v4/words.json/randomWord?hasDictionaryDef=
 definition_url_start = "http://api.wordnik.com:80/v4/word.json/";
 definition_url_end = "/definitions?limit=1&includeRelated=false&sourceDictionaries=all&useCanonical=false&includeTags=false&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5";
 
+prev_word = "";
 word = "";
 definition = "";
 
@@ -30,6 +31,7 @@ function draw() {
     say(definition);
     $("#score").html(score);
     $("#guesses").html(guesses);
+    $("#prev_word").html(prev_word);
 }
 
 function new_game() {
@@ -42,6 +44,8 @@ function new_game() {
 };
 
 function new_word() {
+
+    prev_word = word;
 
     word = "";
     definition = "";
