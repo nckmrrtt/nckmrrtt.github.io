@@ -5,3 +5,4 @@ bootstrap-3*
 devchats*
 cleanup.sh
 backup/*
+projects/haikubot/local_settings.py
