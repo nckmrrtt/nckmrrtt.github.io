@@ -6,16 +6,24 @@ def connect():
                       consumer_secret=MY_CONSUMER_SECRET,
                       access_token_key=MY_ACCESS_TOKEN_KEY,
                       access_token_secret=MY_ACCESS_TOKEN_SECRET)
+
+    #print api.VerifyCredentials()
+
     return api
     
+
+
 def create_tweet():
-    return "omg my first automated tweet! #myFirstTweet #camelCase"
+    return "wow, my first automated tweet! #heroku #testing #myFirstTweet #camelCase"
+
+
 
                                                     
 if __name__=="__main__":
     
     api = connect()
     tweet = create_tweet()
+
     print "posting tweet: " + tweet
 
     if DEBUG==False:
