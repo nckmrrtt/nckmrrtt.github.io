@@ -1,13 +1,16 @@
+# coding: utf-8
 
 # HAIKU BOT
 
 import twitter
 import requests
 import nltk
+import yweather
 
 import random
 import os
 import json
+import re
 
 from datetime import date
 from nltk.corpus import cmudict
@@ -23,24 +26,59 @@ MEMO = [None] * 10
 CMU_DICT = None
 NATURE_DICT = json.load(open('words/nature_syllables'))
 
+TWITTER_API = None
+
+# use a giant web url matching regex bc why not
+# https://gist.github.com/gruber/8891611
+URL_REGEX = re.compile(r"""(?i)\b((?:https?:(?:/{1,3}|[a-z0-9%])|[a-z0-9.\-]+[.](?:com|net|org|edu|gov|mil|aero|asia|biz|cat|coop|info|int|jobs|mobi|museum|name|post|pro|tel|travel|xxx|ac|ad|ae|af|ag|ai|al|am|an|ao|aq|ar|as|at|au|aw|ax|az|ba|bb|bd|be|bf|bg|bh|bi|bj|bm|bn|bo|br|bs|bt|bv|bw|by|bz|ca|cc|cd|cf|cg|ch|ci|ck|cl|cm|cn|co|cr|cs|cu|cv|cx|cy|cz|dd|de|dj|dk|dm|do|dz|ec|ee|eg|eh|er|es|et|eu|fi|fj|fk|fm|fo|fr|ga|gb|gd|ge|gf|gg|gh|gi|gl|gm|gn|gp|gq|gr|gs|gt|gu|gw|gy|hk|hm|hn|hr|ht|hu|id|ie|il|im|in|io|iq|ir|is|it|je|jm|jo|jp|ke|kg|kh|ki|km|kn|kp|kr|kw|ky|kz|la|lb|lc|li|lk|lr|ls|lt|lu|lv|ly|ma|mc|md|me|mg|mh|mk|ml|mm|mn|mo|mp|mq|mr|ms|mt|mu|mv|mw|mx|my|mz|na|nc|ne|nf|ng|ni|nl|no|np|nr|nu|nz|om|pa|pe|pf|pg|ph|pk|pl|pm|pn|pr|ps|pt|pw|py|qa|re|ro|rs|ru|rw|sa|sb|sc|sd|se|sg|sh|si|sj|Ja|sk|sl|sm|sn|so|sr|ss|st|su|sv|sx|sy|sz|tc|td|tf|tg|th|tj|tk|tl|tm|tn|to|tp|tr|tt|tv|tw|tz|ua|ug|uk|us|uy|uz|va|vc|ve|vg|vi|vn|vu|wf|ws|ye|yt|yu|za|zm|zw)/)(?:[^\s()<>{}\[\]]+|\([^\s()]*?\([^\s()]+\)[^\s()]*?\)|\([^\s]+?\))+(?:\([^\s()]*?\([^\s()]+\)[^\s()]*?\)|\([^\s]+?\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’])|(?:(?<!@)[a-z0-9]+(?:[.\-][a-z0-9]+)*[.](?:com|net|org|edu|gov|mil|aero|asia|biz|cat|coop|info|int|jobs|mobi|museum|name|post|pro|tel|travel|xxx|ac|ad|ae|af|ag|ai|al|am|an|ao|aq|ar|as|at|au|aw|ax|az|ba|bb|bd|be|bf|bg|bh|bi|bj|bm|bn|bo|br|bs|bt|bv|bw|by|bz|ca|cc|cd|cf|cg|ch|ci|ck|cl|cm|cn|co|cr|cs|cu|cv|cx|cy|cz|dd|de|dj|dk|dm|do|dz|ec|ee|eg|eh|er|es|et|eu|fi|fj|fk|fm|fo|fr|ga|gb|gd|ge|gf|gg|gh|gi|gl|gm|gn|gp|gq|gr|gs|gt|gu|gw|gy|hk|hm|hn|hr|ht|hu|id|ie|il|im|in|io|iq|ir|is|it|je|jm|jo|jp|ke|kg|kh|ki|km|kn|kp|kr|kw|ky|kz|la|lb|lc|li|lk|lr|ls|lt|lu|lv|ly|ma|mc|md|me|mg|mh|mk|ml|mm|mn|mo|mp|mq|mr|ms|mt|mu|mv|mw|mx|my|mz|na|nc|ne|nf|ng|ni|nl|no|np|nr|nu|nz|om|pa|pe|pf|pg|ph|pk|pl|pm|pn|pr|ps|pt|pw|py|qa|re|ro|rs|ru|rw|sa|sb|sc|sd|se|sg|sh|si|sj|Ja|sk|sl|sm|sn|so|sr|ss|st|su|sv|sx|sy|sz|tc|td|tf|tg|th|tj|tk|tl|tm|tn|to|tp|tr|tt|tv|tw|tz|ua|ug|uk|us|uy|uz|va|vc|ve|vg|vi|vn|vu|wf|ws|ye|yt|yu|za|zm|zw)\b/?(?!@)))""")
+
+# strip twitter handles and emails
+HANDLE_REGEX = re.compile(r'([A-Za-z0-9_\.]*)@([A-Za-z0-9_\.]+)')
+
 
 ### TWITTER FUNCTIONS
 
 
 def connect():
 
-    #print api.VerifyCredentials()
+    global TWITTER_API
 
-    return api
+    TWITTER_API = twitter.Api(consumer_key=MY_CONSUMER_KEY,
+                              consumer_secret=MY_CONSUMER_SECRET,
+                              access_token_key=MY_ACCESS_TOKEN_KEY,
+                              access_token_secret=MY_ACCESS_TOKEN_SECRET)
+
+    #print TWITTER_API.VerifyCredentials()
 
 
-def construct_tweet():
+def print_hashtags():
+
+    client = yweather.Client()
+    where = client.fetch_woeid('USA')
+    try:
+        trends = TWITTER_API.GetTrendsWoeid(where)
+    except:
+        trends = TWITTER_API.GetTrends()
+        print "no trends found? yikes"
+
+    for trend in trends[:10]:
+        print trend.AsDict()['name']
+
+
+def construct_tweet(hashtag=None):
+
+    if hashtag:
+        current_dict = construct_dict(hashtag)
+    
+    # covers no hashtag case and construct_dict failure case
+    if not current_dict:
+        current_dict = NATURE_DICT
 
     while True:
         haiku = ""
-        haiku += construct_line(5) + "\n"
-        haiku += construct_line(7) + "\n"
-        haiku += construct_line(5) + "\n"
+        haiku += construct_line(5, current_dict) + "\n"
+        haiku += construct_line(7, current_dict) + "\n"
+        haiku += construct_line(5, current_dict) + "\n"
         if len(haiku) < 140:
             break
 
@@ -48,28 +86,66 @@ def construct_tweet():
     print haiku
     print ""
 
+
+def post_tweet(tweet):
     if not DEBUG:
-
-        api = twitter.Api(consumer_key=MY_CONSUMER_KEY,
-                          consumer_secret=MY_CONSUMER_SECRET,
-                          access_token_key=MY_ACCESS_TOKEN_KEY,
-                          access_token_secret=MY_ACCESS_TOKEN_SECRET)
-
         print "POSTING TWEET..."
-        status = api.PostUpdate(haiku)
+        status = TWITTER_API.PostUpdate(tweet)
         print "posted tweet. status: " + str(status)
 
 
 ### LANGUAGE FUNCTIONS
 
 
-def construct_line(num_syllables):
+def construct_dict(hashtag):
+
+    hashtag = hashtag.lower().replace("#", "")
+
+    with open('words/' + hashtag, 'w') as f:
+
+        # get tweets with hashtag
+        results = TWITTER_API.GetSearch(term=hashtag)
+        
+        
+        #print results
+
+        #extract and sanitize lines
+        lines = [x.AsDict()['text'] for x in results]
+        for line in lines:
+            """
+            TODO:
+            replace 4th with fourth (could happen in syllablize_file)??
+            """
+            print "before: '" + line + "'"
+            # remove twitter handles and email addresses
+            line = re.sub(HANDLE_REGEX, "", line)
+            # remove links
+            line = re.sub(URL_REGEX, "", line)
+            # break hashtags into parseable words
+            line = split_hashtags(line)
+            print "after:  '" + line + "'"
+            print "---------------"
+
+            line += "\n"
+            f.write(line.encode('utf8'))
+
+    with open('words/' + hashtag, 'r') as f:
+        print
+        print "the dict for hashtag " + hashtag + " so far:"
+        print f.read().decode('utf8')
+
+        # syllablize file
+
+    return {}
+
+
+def construct_line(num_syllables, current_dict=NATURE_DICT):
     
     current_line = ""
     syls_left = num_syllables
 
     while syls_left != 0:
-        line, syls = random.choice(NATURE_DICT.items())
+        line, syls = random.choice(current_dict.items())
         if int(syls) < 1:
             print "WTF: line '" + line + "' has < 1 syls"
             continue
@@ -83,6 +159,9 @@ def construct_line(num_syllables):
 
 
 def line_syllables(line):
+
+    line = split_hashtags(line)
+
     total = 0
     for x in line.split():
         syls = syllables(x)
@@ -95,6 +174,8 @@ def line_syllables(line):
 
 
 def syllables(word):
+
+    word = word.replace('#', '')
 
     if not word:
         return 0
@@ -109,6 +190,24 @@ def syllables(word):
         print "ERROR: could not retrieve syllables for word: '" + word + "'"
 
     return syls
+
+
+def split_hashtags(line):
+
+    result = []
+    for word in line.replace("#", "").split():
+        if not word[0].isupper() or len(word) == 1:
+            result.append(word)
+            continue
+        for chunk in re.findall('[A-Z][^A-Z]*', word):
+            if len(chunk) == 1:
+                return line
+            result.append(chunk)
+
+    for chunk in result:
+        if not syllables(chunk):
+            return line
+    return " ".join(result)
 
 
 def syllables_wordnik_algo(word):
@@ -185,6 +284,18 @@ def random_word(num_syllables):
     return random.choice(open('words/' + str(num_syllables)).readlines()).strip('\n')
 
 
+def syllablize_file(file):
+    d = {}
+    for line in open(file).readlines():
+        line = line.strip()
+        syls = line_syllables(line)
+        if syls == 0:
+            syls = line_syllables(line.replace('-', ' '))
+        d[line] = syls
+    print d
+    json.dump(d, open(file + "_syllables", 'w'), sort_keys=True, indent=4)
+
+
 ### UTIL FUNCTIONS
 
 
@@ -204,18 +315,14 @@ def test():
         got[i] = word
 
 
-def syllablize_file(file):
-    d = {}
-    for line in open(file).readlines():
-        line = line.strip()
-        syls = line_syllables(line)
-        if syls == 0:
-            syls = line_syllables(line.replace('-', ' '))
-        d[line] = syls
-    print d
-    json.dump(d, open(file + "_syllables", 'w'), sort_keys=True, indent=4)
-
-
 if __name__=="__main__":
     
-    construct_tweet()
+    connect()
+
+    # print_hashtags()
+
+    construct_dict("July")
+
+    #tweet = construct_tweet(hashtag)
+
+    #post_tweet()
