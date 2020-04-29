@@ -10,12 +10,9 @@ prev_word = "";
 word = "";
 definition = "";
 
-score = 0;
-guesses = 0;
-
 function say(msg, delay) {
     if (!msg) {
-        $('<p><br></p>').appendTo("#display"); //TODO ytf doesn't this work
+        $('<p><br></p>').appendTo("#display");
     } else {
         if (!delay) var delay = 1;
         $('<p>' + String(msg) + '</p>').appendTo("#display").fadeIn(delay * 1000);
@@ -23,12 +20,13 @@ function say(msg, delay) {
 };
 
 function draw() {
+
     // clear everything
     $("#display").empty();
     $("#input_word").val("");
 
     // redraw everything
-    say(definition);
+    say(definition + " (" + word.length + " letters)");
     $("#score").html(score);
     $("#guesses").html(guesses);
     $("#prev_word").html(prev_word);
@@ -45,6 +43,7 @@ function new_game() {
 
 function new_word() {
 
+    debugger;
     prev_word = word;
 
     word = "";
@@ -107,3 +106,8 @@ function guess() {
     $("#input_word").val("");
     
 };
+
+
+
+
+new_game();
